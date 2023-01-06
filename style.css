@@ -15,18 +15,40 @@
   justify-content: center;
   height: 100vh;
   gap: 30px;
+  min-width: 300px;
 }
 
 .top-right {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-left: 40px;
 }
 
 .submit-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+}
+
+.middle-right > h1 {
+  background-color: rgb(22, 22, 22);
+  color: purple;
+}
+
+.middle-right {
+  background-color: rgb(22, 22, 22);
+  padding: 30px 0px 30px 40px;
+}
+
+.bottom-right {
+  margin-left: 40px;
 }
 
 .labels {
@@ -34,6 +56,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding-top: 30px;
+  max-width: 600px;
 }
 
 .left {
@@ -44,5 +68,65 @@
 
 img {
   width: 100%;
+  min-width: 250px;
   height: 100vh;
 }
+
+input,
+label {
+  display: block;
+  background-color: rgb(22, 22, 22);
+}
+
+label {
+  font-size: 10px;
+  padding-bottom: 2px;
+}
+
+input {
+  padding: 5px;
+}
+
+#submit {
+  background-color: purple;
+  border: 1px solid purple;
+  color: green;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#submit:hover {
+  background-color: rgba(139, 195, 74, 0.25);
+  border: 1px solid rgba(139, 195, 74, 0.25);
+}
+
+.submit-form input:invalid {
+  border: 1px solid white;
+}
+
+.submit-form input:focus:invalid {
+  border: 1px solid #b92326;
+}
+
+.submit-form input:valid {
+  border: 1px solid white;
+}
+
+.submit-form input:focus:valid {
+  border: 1px solid #8bc34a;
+}
+
+:focus {
+  outline: 0;
+}
+
+/* more width between inputs than height?
+media case for phone to position image above
+banner overlay image
+javascript to check every character for invalid input
+persistent invalid reminder
+password comparison in javascript */
