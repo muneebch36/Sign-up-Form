@@ -7,8 +7,25 @@
   font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
-h1 {
+h1,
+p {
   background-color: transparent;
+}
+
+a[href^="https"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+.foot {
+  position: relative;
+  bottom: 1.5%;
+  background-color: transparent;
+}
+
+.foot > p {
+  color: green;
+  font-size: 10px;
 }
 
 .left {
@@ -19,7 +36,7 @@ h1 {
 }
 
 img {
-  width: clamp(200px, 100%, 400px);
+  width: clamp(200px, 100%, 600px);
   height: 100vh;
 }
 
@@ -28,12 +45,21 @@ img {
   align-items: center;
   position: absolute;
   justify-content: center;
-  gap: 10px;
-  width: clamp(200px, 100%, 400px);
+  width: clamp(200px, 100%, 600px);
   height: 5rem;
-  bottom: 50%;
-  background-color: rgba(128, 0, 128, 0.534);
+  bottom: 43%;
+  background-color: rgba(128, 0, 128, 0.699);
   text-align: center;
+}
+
+.banner > h1 {
+  color: black;
+}
+
+.banner > h1::before {
+  content: "\1F419";
+  padding-right: 10px;
+  font-size: 50px;
 }
 
 .right {
@@ -74,6 +100,11 @@ img {
   margin-left: 40px;
 }
 
+a[href*="url"] {
+  color: purple;
+  text-decoration: none;
+}
+
 .labels {
   background-color: transparent;
   display: flex;
@@ -101,7 +132,7 @@ input {
 #submit {
   background-color: purple;
   border: 1px solid purple;
-  color: green;
+  color: black;
   padding: 5px 15px;
   font-size: 16px;
   font-weight: 700;
@@ -111,7 +142,8 @@ input {
 }
 
 #submit:hover {
-  background-color: rgb(0, 0, 0);
+  color: white;
+  background-color: rgb(22, 22, 22);
   border: 1px solid rgb(0, 0, 0);
 }
 
@@ -138,6 +170,9 @@ input {
     position: relative;
     width: 100%;
     height: 30vh;
+  }
+  .foot {
+    bottom: 5%;
   }
 
   img {
@@ -180,7 +215,7 @@ input {
     display: flex;
     flex-direction: column;
     background-color: rgb(22, 22, 22);
-    padding: 0;
+    padding: 10px 0px 20px 0px;
   }
 
   .bottom-right {
@@ -197,12 +232,10 @@ input {
   }
 
   #submit {
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
   }
 }
 /* 
-media case for phone to position image above
 javascript to check every character for invalid input
 persistent invalid reminder
 password comparison in javascript */

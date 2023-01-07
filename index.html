@@ -9,12 +9,16 @@
     <div class="left">
       <img src="./cthulhu.jpg" />
       <div class="banner">
-        <h1>The Call</h1>
+        <h1>THE CALL</h1>
       </div>
-      <footer>
-        Photo by <a href="https://unsplash.com/@vork">Mark Boss</a> on
-        <a href="https://unsplash.com/photos/nAhEimuT04w">Unsplash</a>
-      </footer>
+      <div class="foot">
+        <p>
+          <i
+            >Photo by <a href="https://unsplash.com/@vork">Mark Boss</a> on
+            <a href="https://unsplash.com/photos/nAhEimuT04w">Unsplash</a></i
+          >
+        </p>
+      </div>
     </div>
     <div class="right">
       <div class="top-right">
@@ -81,6 +85,7 @@
                 name="password"
                 type="password"
                 minlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$"
                 required
               />
             </div>
@@ -92,6 +97,7 @@
                 name="password-confirm"
                 type="password"
                 minlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$"
                 required
               />
             </div>
